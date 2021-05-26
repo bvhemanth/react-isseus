@@ -1,0 +1,40 @@
+.eachIssue{
+    width: 33.33%;
+    float: left;
+}
+a{
+    text-decoration: none;
+}
+.item{
+    text-decoration: none;
+    margin: 0.875rem;
+    padding: 0.875rem;
+    min-height: 12rem;
+    height: 12rem;
+    overflow: hidden;
+    word-break: break-all;
+    border-radius: 0.5rem;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 5px #ddd;
+    transition: 1s;
+}
+.label{
+    display: inline-block;
+    font-size: 0.975rem;
+    border-radius: 0.5rem;
+    padding: 0 0.5rem;
+    line-height: 1.825rem;
+    margin-right: 0.2rem;
+}
+
+.cardtitle{
+    font-weight: 600;
+    color: #2a2d53;
+}
+.card__author{
+    text-align: right;
+}
+.cardnumber{
+    color: #5794d3;
+}
