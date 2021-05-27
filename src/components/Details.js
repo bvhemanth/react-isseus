@@ -4,7 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 // import { Link, useLocation, BrowserRouter as Router } from "react-router-dom";
 // import { useParams } from 'react-router-dom';
-const url="https://api.github.com/repos/rails/rails/issues/";
+import { url }  from './constants';
 
 class Details extends React.Component{
 
@@ -16,10 +16,11 @@ class Details extends React.Component{
    
     componentDidMount(){
         const gitid = this.id.split('/').pop();
-    
+        const reqUrl= url+"/"+gitid;
+        console.log(reqUrl)
         axios({
             method: 'GET',
-            url: url+gitid,
+            url:reqUrl,
         }).then(response => {
             const details = response.data;
             this.setState({ details });
@@ -39,7 +40,9 @@ class Details extends React.Component{
                         <h3>Status</h3> 
                         {this.state.details.state}
                         <h3>Labels</h3> 
-                        {this.state.details.state}
+                        <div>
+                          --
+                        </div>
                         <h3>Created</h3> 
                         { this.state.details.created_at}
                     </div>

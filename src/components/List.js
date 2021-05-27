@@ -4,21 +4,23 @@ import { Link } from 'react-router-dom';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import axios from 'axios';
+import { url }  from './constants';
 const query = 
 `query list {
   title
   number
 }`;
-const url="https://api.github.com/repos/rails/rails/issues?page=1&per_page=25";
+
 
 class List extends React.Component{
     state = {
         list: []
       }
+
     componentDidMount(){
         axios({
             method: 'GET',
-            url: url,
+            url: url+'?page=1&per_page=25',
         })
         .then(response => {
           const list = response.data;
