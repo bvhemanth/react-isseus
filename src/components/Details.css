@@ -5,16 +5,25 @@
   }
   
   .SplitPane-left {
+    text-align: left;
     float: left;
     width: 30%;
-    height: 100%;
-    background: lightblue;
+    padding: 5px;
+    height: auto;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 5px #ddd;
   }
   
   .SplitPane-right {
-    float: left;
-    width: 70%;
-    height: 100%;
-    background: blue;
+    float: right;
+    width: 69%;
+    height: auto;
+    padding: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 3px 5px #ddd;
+    box-sizing: border-box;
+    font-size: .875rem;
+    text-align: left;
   }
   
